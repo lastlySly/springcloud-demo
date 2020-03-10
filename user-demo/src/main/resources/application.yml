@@ -1,0 +1,15 @@
+server:
+  port: 8083
+
+#服务名称，服务注册到eureka的名称
+spring:
+  application:
+    name: springcloud-demo-user-demo
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8088/eureka
+    #是否需要检索服务
+    fetch-registry: true
+    #注册到eureka
+    register-with-eureka: true

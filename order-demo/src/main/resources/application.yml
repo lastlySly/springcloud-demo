@@ -1,0 +1,22 @@
+server:
+  port: 8091
+
+spring:
+  application:
+    name: springcloud-demo-order-demo
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8088/eureka
+    fetch-registry: true
+    register-with-eureka: true
+# 负载均衡模式
+springcloud-demo-user-demo:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+feign:
+  hystrix:
+    enabled: true
+
+
